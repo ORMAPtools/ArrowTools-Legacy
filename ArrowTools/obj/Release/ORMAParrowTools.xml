@@ -1,0 +1,188 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ORMAParrowTools
+</name>
+</assembly>
+<members>
+<member name="P:ORMAParrowTools.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:ORMAParrowTools.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:ORMAParrowTools.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:ORMAParrowTools.My.ThisAddIn.IDs.DimensionArrows">
+	<summary>
+Returns 'ORMAP_ArrowTools_DimensionArrows', the id declared for Add-in Tool class 'DimensionArrows'
+</summary>
+</member><member name="P:ORMAParrowTools.My.ThisAddIn.IDs.arrowContextMenu">
+	<summary>
+Returns 'ORMAP_ArrowTools_arrowContextMenu', the id declared for Add-in MultiItem class 'arrowContextMenu'
+</summary>
+</member><member name="P:ORMAParrowTools.My.ThisAddIn.IDs.straightArrows">
+	<summary>
+Returns 'ORMAP_ArrowTools_straightArrows', the id declared for Add-in Tool class 'straightArrows'
+</summary>
+</member><member name="P:ORMAParrowTools.My.ThisAddIn.IDs.LandHook">
+	<summary>
+Returns 'ORMAP_ArrowTools_LandHook', the id declared for Add-in Tool class 'LandHook'
+</summary>
+</member><member name="P:ORMAParrowTools.My.ThisAddIn.IDs.singleArrow">
+	<summary>
+Returns 'ORMAP_ArrowTools_singleArrow', the id declared for Add-in Tool class 'singleArrow'
+</summary>
+</member><member name="P:ORMAParrowTools.My.ThisAddIn.IDs.RoadTic">
+	<summary>
+Returns 'ORMAP_ArrowTools_RoadTic', the id declared for Add-in Tool class 'RoadTic'
+</summary>
+</member><member name="P:ORMAParrowTools.My.ThisAddIn.IDs.referenceScale">
+	<summary>
+Returns 'ORMAP_ArrowTools_referenceScale', the id declared for Add-in ComboBox class 'referenceScale'
+</summary>
+</member><member name="T:ORMAParrowTools.My.ThisAddIn.IDs">
+	<summary>
+A class for looking up Add-in id strings declared in the associated configuration xml file (.esriaddinx).
+</summary>
+</member><member name="T:ORMAParrowTools.My.ThisAddIn">
+	<summary>
+A class for looking up declarative information in the associated configuration xml file (.esriaddinx).
+</summary>
+</member><member name="M:ORMAParrowTools.My.Internal.AddInStartupObject.GetThis">
+	<summary>
+ Expose this instance of Add-in class externally
+ </summary>
+</member><member name="M:ORMAParrowTools.DimensionArrows.setArrowOffset(ESRI.ArcGIS.Geometry.IPoint)">
+	<summary>
+ Sets the offset distance from an imaginary line between the two arrow points
+ </summary>
+	<param name="nearPoint"></param>
+	<remarks></remarks>
+</member><member name="T:ORMAParrowTools.arrowUtilities.arrowCategories">
+	<summary>
+ Enumeration of arrow types.
+ </summary>
+</member><member name="T:ORMAParrowTools.arrowUtilities.arrowStyles">
+	<summary>
+ Enumeration of single arrow styles
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.setLineFeedback(ESRI.ArcGIS.Geometry.IPoint)">
+	<summary>
+ Set up the arrow display after the first mouse click
+ </summary>
+	<param name="thePoint">Mouse position in data frame coordinates</param>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.placeArrows(ESRI.ArcGIS.Geometry.IPoint,ESRI.ArcGIS.Geometry.IPoint)">
+	<summary>
+ Places the arrows after the last mouse click
+ </summary>
+	<param name="endPoint">Mouse position in data frame coordinates</param>
+	<param name="middlePoint">Optional second mouse point for arrows that 
+ require three points</param>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.selectNewArrows">
+	<summary>
+ Adds newly created items to the selection set so that common attributes can be edited easily
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.EditorEvents_onSelectionChanged">
+	<summary>
+ Clears the list of objectIDs used for selection when the selection set is cleared
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.perpendicularAngle">
+	<summary>
+ Finds the angle perpendicular to the selected line for straight opposing arrows
+ </summary>
+	<returns>the perpendicular angle</returns>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.showHelp">
+	<summary>
+ Shows the help file
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.SetScale(ESRI.ArcGIS.Geometry.IPoint)">
+	<summary>
+ Finds the map scale based on the underlying MapIndex polygon and saves it in
+ the _arrowScale variable
+ </summary>
+	<param name="thePoint">The first arrow point</param>
+	<remarks>If there is no map index a scale of 1 (1"=100') is set</remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.getArrowGeometry(ESRI.ArcGIS.Geometry.IPoint)">
+	<summary>
+ Get the geometry of the paired arrows or road tics
+ </summary>
+	<param name="endPoint">Mouse position in data frame coordinates</param>
+	<returns>An IPolyLineArray of two elements</returns>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.showLineFeedback(ESRI.ArcGIS.Geometry.IPoint,ESRI.ArcGIS.Geometry.IPoint)">
+	<summary>
+ Show the arrows while moving the mouse
+ </summary>
+	<param name="endPoint">Mouse position in data frame coordinates</param>
+	<param name="middlePoint">Option second mouse point for arrows that 
+ require three points</param>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.getSingleArrowGeometry(ESRI.ArcGIS.Geometry.IPoint,ESRI.ArcGIS.Geometry.IPoint)">
+	<summary>
+ Get the geometry for a single arrow
+ </summary>
+	<param name="endPoint">Mouse position in data frame coordinates</param>
+	<param name="middlePoint">Optional second mouse point for arrows that 
+ require three points</param>
+	<returns>The arrow geometry as an IPolyLine</returns>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.drawArrowImage(ESRI.ArcGIS.Geometry.IPolyline,System.Int32)">
+	<summary>
+ Draws the arrow image to the screen
+ </summary>
+	<param name="arrow">Input polyline</param>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.keyCommands(System.Int32,System.Boolean)">
+	<summary>
+ KeyDown events 
+ </summary>
+	<param name="keyCode">the key code</param>
+	<param name="isShifted">the shift key status</param>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.setDefaultTool">
+	<summary>
+ Activates the Select Features Tool to unselect an arrow tool due to 
+ being in the layout view
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.placeFreeformArrow">
+	<summary>
+ Places a freeform arrow when the user double-clicks or selects finish from
+ the context menu
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.checkDataView">
+	<summary>
+ Checks to see that the map in is data view. If not gives the option to change it.
+ </summary>
+	<returns>If the return is false the tool is cancelled</returns>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.clearAll">
+	<summary>
+ Clears the graphics container
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ORMAParrowTools.arrowUtilities.ReadXML(System.Int32)">
+	<summary>
+ Reads the XML settings file
+ </summary>
+	<param name="arrowType">The arrow geometry being extracted from the file</param>
+	<returns>A formatted string with coordinate pairs</returns>
+	<remarks>The XML file is in the program installation folder</remarks>
+</member>
+</members>
+</doc>

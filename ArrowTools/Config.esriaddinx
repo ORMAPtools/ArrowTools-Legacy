@@ -1,0 +1,47 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ArrowTools</Name>
+  <AddInID>{ca3c246e-29e9-46c6-83d3-d6b9ff4669c0}</AddInID>
+  <Description>Places cartographic line arrows on a map</Description>
+  <Version>4.1</Version>
+  <Image>Images\ArrowTools.png</Image>
+  <Author>John Prychun</Author>
+  <Company>Oregon Department Of Revenue</Company>
+  <Date>1/10/2012 revised 4/13/2015</Date>
+  <Targets>
+    <Target name="Desktop" version="10.3" />
+  </Targets>
+  <AddIn language="CLR" library="ORMAParrowTools.dll" namespace="ORMAParrowTools">
+    <ArcMap>
+      <Commands>
+        <Tool id="ORMAP_ArrowTools_DimensionArrows" class="DimensionArrows" message="Places a pair of curved dimension arrows" caption="Curved dimension arrows" tip="Place a pair of curved dimension arrows" category="OrmapToolbarAddIn" image="Images\DimensionArrows.png" onDemand="false" cursor="Images\DimensionArrows.cur" />
+        <MultiItem id="ORMAP_ArrowTools_arrowContextMenu" class="arrowContextMenu" caption="dimArrows" />
+        <Tool id="ORMAP_ArrowTools_straightArrows" class="straightArrows" message="Places two opposed straight arrows perpendicular to a line" caption="Straight Arrows" tip="Place opposed straight arrows" category="OrmapToolbarAddIn" image="Images\straightArrows.png" onDemand="false" cursor="Images\straightArrows.cur" />
+        <Tool id="ORMAP_ArrowTools_LandHook" class="LandHook" message="Places a land hook" caption="Land Hook" tip="Place a land hook" category="OrmapToolbarAddIn" image="Images\LandHook.png" onDemand="false" cursor="Images\LandHook.cur" />
+        <Tool id="ORMAP_ArrowTools_singleArrow" class="singleArrow" message="Places as single arrow" caption="Single Arrow" tip="Place a single arrow" category="OrmapToolbarAddIn" image="Images\singleArrow.png" onDemand="false" cursor="Images\singleArrow.cur" />
+        <Tool id="ORMAP_ArrowTools_RoadTic" class="RoadTic" message="Places a road tic" caption="Road Tic" tip="Place a road tic" category="OrmapToolbarAddIn" image="Images\RoadTic.png" onDemand="false" cursor="Images\LandHook.cur" />
+        <ComboBox id="ORMAP_ArrowTools_referenceScale" class="referenceScale" message="Sets the reference scale" caption="Scale" tip="Set the reference scale" category="OrmapToolbarAddIn" image="Images\referenceScale.png" sizeString="88888" rows="40" itemSizeString="88888" showCaption="true" editable="false" />
+      </Commands>
+      <Menus>
+        <Menu id="ORMAP_ArrowTools_arrowMenu" caption="arrowContextMenu" isRootMenu="false" isShortcutMenu="true">
+          <Items>
+            <MultiItem refID="ORMAP_ArrowTools_arrowContextMenu"></MultiItem>
+          </Items>
+        </Menu>
+      </Menus>
+      <Toolbars>
+        <Toolbar id="ORMAP_ArrowTools_Arrow_Toolbar" caption="ORMAP Arrow Toolbar" showInitially="true">
+          <Items>
+            <Tool refID="ORMAP_ArrowTools_singleArrow" />
+            <Tool refID="ORMAP_ArrowTools_DimensionArrows" />
+            <Tool refID="ORMAP_ArrowTools_straightArrows" />
+            <Tool refID="ORMAP_ArrowTools_LandHook" />
+            <Tool refID="ORMAP_ArrowTools_RoadTic" />
+            <ComboBox refID="ORMAP_ArrowTools_referenceScale" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
+      <DockableWindows>
+      </DockableWindows>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
