@@ -1,5 +1,5 @@
 # ArrowTools
-Tools for creating arrows in ArcMap 10.1 to 10.4
+Tools for creating arrows in ArcMap 10.1 to 10.6 in Windows 7. Tested with ArcMap 10.5.1 in Windows 10.
 
 ![alt text](https://github.com/ORMAPtools/ArrowTools/blob/master/Supplemental/ArrowToolsToolbar.png "Image of the toolbar")
 
