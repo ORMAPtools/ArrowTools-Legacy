@@ -2,7 +2,7 @@
 Tools for creating arrows in ArcMap 10.1 to 10.6 in Windows 7. Tested with ArcMap 10.5.1 in Windows 10.
 
 *This version is no longer maintained. We are moving to support only ArcGIS Pro, refer to the 
-[ORMAP-ArrowTools](https://github.com/ORMAPtools/ORMAP-ArrowTools/) repository for the latest version.*
+[ORMAP-ArrowTools](https://github.com/ORMAPtools/ArrowTools/) repository for the latest version.*
 
 ![alt text](https://github.com/ORMAPtools/ArrowTools-Legacy/blob/master/Supplemental/ArrowToolsToolbar.png "Image of the toolbar")
 
